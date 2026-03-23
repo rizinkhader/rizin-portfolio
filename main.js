@@ -179,13 +179,6 @@ function animate() {
     time += 1;
 }
 
-// 1. Loader Logic
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.querySelector('.loader-wrapper').classList.add('fade-out');
-    }, 1000); 
-});
-
 // 3. Scroll Reveal Animations (Intersection Observer)
 const revealElements = document.querySelectorAll('.reveal');
 const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
