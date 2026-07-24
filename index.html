@@ -1,114 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-background">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rizin Khader - Portfolio</title>
-    <meta name="description" content="Portfolio of Rizin Khader featuring interactive particle collision simulation">
-    
-    <!-- Google Fonts -->
+    <meta name="theme-color" content="#04050c">
+    <title>Rizin Khader — Software Engineer / Deep Space Observatory</title>
+    <meta name="description" content="Portfolio of Rizin Khader, software engineer. An interactive deep-space observatory featuring full-stack engineering, cybersecurity, and creative systems work.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 <body>
     <canvas id="particleCanvas"></canvas>
-    
+
+    <!-- Registration brackets -->
+    <span class="frame-corner tl"></span>
+    <span class="frame-corner tr"></span>
+    <span class="frame-corner bl"></span>
+    <span class="frame-corner br"></span>
+
     <div class="content-wrapper">
         <header class="glass-header reveal">
-            <div class="logo">Rizzler</div>
+            <div class="logo">
+                <svg class="logo-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(-25 12 12)"></ellipse>
+                    <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(35 12 12)"></ellipse>
+                </svg>
+                <span>RIZIN KHADER<small>OBSERVATORY · EST. 2026</small></span>
+            </div>
             <button class="mobile-menu-btn hover-target" aria-label="Toggle Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
             <nav class="nav-links">
-                <a href="#about" class="nav-link hover-target">About</a>
-                <a href="#skills" class="nav-link hover-target">Skills</a>
-                <a href="#projects" class="nav-link hover-target">Projects</a>
-                <a href="#certifications" class="nav-link hover-target">Certifications</a>
-                <a href="#contact" class="nav-link hover-target">Contact</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Systems</a>
+                <a href="#projects" class="nav-link">Missions</a>
+                <a href="#certifications" class="nav-link">Credentials</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
         </header>
 
         <main>
+            <!-- HERO -->
             <section id="hero" class="hero section">
-                <div class="glass-card reveal">
-                    <h1 class="gradient-text">Rizin Khader</h1>
-                    <h2>Creative Developer & Problem Solver</h2>
-                    <p>I build interactive, high-performance web experiences with stunning interfaces and cutting-edge technologies.</p>
-                    <div class="btn-group" style="margin-top: 2rem;">
-                        <a href="#projects" class="cta-button primary hover-target">View My Work</a>
-                        <a href="https://drive.google.com/file/d/1ZZpDtYmnrk9szaabwtoFtILJ_F9xhwyU/view?usp=drive_link" target="_blank" class="cta-button hover-target">View CV</a>
+                <div class="hero-inner reveal">
+                    <span class="eyebrow">Software Engineer · Systems &amp; Security</span>
+                    <h1 class="gradient-text text-balance">Rizin Khader</h1>
+                    <h2>Building resilient systems across the digital cosmos</h2>
+                    <p class="text-pretty">I engineer interactive, high-performance web platforms and secure architectures — merging computer-science fundamentals with precise, beautiful execution.</p>
+                    <div class="btn-group">
+                        <a href="#projects" class="cta-button primary">Explore Missions</a>
+                        <a href="https://drive.google.com/file/d/1ZZpDtYmnrk9szaabwtoFtILJ_F9xhwyU/view?usp=drive_link" target="_blank" rel="noopener" class="cta-button">Download CV</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="val">MERN</div>
+                            <div class="lbl">Full-Stack Core</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="val">SEC+</div>
+                            <div class="lbl">Cyber Defense</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="val">60<span style="color:var(--cyan)">FPS</span></div>
+                            <div class="lbl">Creative Engines</div>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <!-- ABOUT -->
             <section id="about" class="section">
+                <div class="section-head reveal">
+                    <span class="section-index">01</span>
+                    <h2 class="section-title">Mission Profile</h2>
+                </div>
                 <div class="glass-card full-width reveal">
-                    <h2 class="section-title">About Me</h2>
-                    <p>I'm a passionate software engineer focused on building robust, scalable applications. I love merging computer science fundamentals with creative and beautiful interactive experiences.</p>
-                    <p style="margin-top: 1rem;">With a strong background in web development and systems architecture, I strive for excellence in every project, ensuring top-tier performance and visual fidelity.</p>
+                    <div class="about-grid">
+                        <div>
+                            <p class="about-lead text-pretty">I'm a software engineer focused on building robust, scalable applications — from full-stack platforms to secure network architectures.</p>
+                            <p>I love merging computer-science fundamentals with creative, interactive experiences. With a strong background in web development and systems architecture, I pursue excellence in every project: top-tier performance, security, and visual fidelity.</p>
+                        </div>
+                        <div class="about-meta">
+                            <div class="meta-row">
+                                <span class="k">Status</span>
+                                <span class="v"><span class="status-dot"></span>Available</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="k">Focus</span>
+                                <span class="v">Full-Stack · Security</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="k">Base</span>
+                                <span class="v">Earth · Remote</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="k">Discipline</span>
+                                <span class="v">Computer Science</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
+            <!-- SKILLS -->
             <section id="skills" class="section">
-                <h2 class="section-title text-center reveal">My Skills</h2>
-                <div class="glass-card full-width text-center reveal" style="margin-bottom: 2rem;">
-                    <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 900px; margin: 0 auto;">
-                        I pick things up quickly and stay updated with the latest technologies. At the same time, I don’t just chase every new trend. I focus on choosing tools and technologies that are actually useful—ones that help save time and improve efficiency for both me and my team.
+                <div class="section-head reveal">
+                    <span class="section-index">02</span>
+                    <h2 class="section-title">Onboard Systems</h2>
+                </div>
+                <div class="glass-card full-width reveal" style="margin-bottom: 1.5rem;">
+                    <p class="text-pretty" style="font-size: 1.1rem; max-width: 900px;">
+                        I adapt quickly and stay current with emerging technology — without chasing every trend. I select tools that are genuinely useful: ones that save time and improve efficiency for both me and my team.
                     </p>
                 </div>
-                
+
                 <div class="projects-grid">
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
+                    <div class="mac-window reveal">
                         <div class="mac-window-top">
                             <div class="mac-dot close"></div>
                             <div class="mac-dot minimize"></div>
                             <div class="mac-dot maximize"></div>
+                            <span class="win-id">SYS-01</span>
                         </div>
                         <div class="mac-window-content text-center">
                             <div class="skill-icon">
-                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                                 </svg>
                             </div>
                             <h3>MERN Stack</h3>
-                            <p>MongoDB, Express.js, React, and Node.js working securely together to build powerful, scalable full-stack applications.</p>
+                            <p>MongoDB, Express.js, React and Node.js orchestrated securely to build powerful, scalable full-stack applications.</p>
                         </div>
                     </div>
-                    
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
+
+                    <div class="mac-window reveal">
                         <div class="mac-window-top">
                             <div class="mac-dot close"></div>
                             <div class="mac-dot minimize"></div>
                             <div class="mac-dot maximize"></div>
+                            <span class="win-id">SYS-02</span>
                         </div>
                         <div class="mac-window-content text-center">
                             <div class="skill-icon">
-                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                                     <path d="M9 12l2 2 4-4"></path>
                                 </svg>
                             </div>
                             <h3>Cyber Security</h3>
-                            <p>Foundations in cyber security preventing exploits, securing data channels, and establishing robust defenses.</p>
+                            <p>Foundations in cyber security — preventing exploits, securing data channels, and establishing robust, layered defenses.</p>
                         </div>
                     </div>
-                    
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
+
+                    <div class="mac-window reveal">
                         <div class="mac-window-top">
                             <div class="mac-dot close"></div>
                             <div class="mac-dot minimize"></div>
                             <div class="mac-dot maximize"></div>
+                            <span class="win-id">SYS-03</span>
                         </div>
                         <div class="mac-window-content text-center">
                             <div class="skill-icon">
-                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                                     <circle cx="9" cy="7" r="4"></circle>
                                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
                                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
@@ -116,146 +178,162 @@
                                 </svg>
                             </div>
                             <h3>Soft Skills</h3>
-                            <p>Effective team communication, collaborative problem solving, leadership, and proactive adaptability in dynamic environments.</p>
+                            <p>Clear team communication, collaborative problem solving, leadership, and proactive adaptability in dynamic environments.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Interactive Tech Stack Cloud -->
                 <div class="tech-stack-marquee">
-                    <div class="marquee-content hover-target">
+                    <div class="marquee-content">
                         <span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Python</span><span>Kali Linux</span><span>Wireshark</span><span>Git</span><span>Tailwind CSS</span><span>PostgreSQL</span>
-                        <!-- duplicate for seamless loop -->
                         <span>React</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Python</span><span>Kali Linux</span><span>Wireshark</span><span>Git</span><span>Tailwind CSS</span><span>PostgreSQL</span>
                     </div>
                 </div>
             </section>
 
+            <!-- PROJECTS -->
             <section id="projects" class="section">
-                <h2 class="section-title text-center reveal">Featured Projects</h2>
+                <div class="section-head reveal">
+                    <span class="section-index">03</span>
+                    <h2 class="section-title">Mission Log</h2>
+                </div>
                 <div class="projects-grid">
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
+                    <div class="mac-window reveal">
                         <div class="mac-window-top">
                             <div class="mac-dot close"></div>
                             <div class="mac-dot minimize"></div>
                             <div class="mac-dot maximize"></div>
+                            <span class="win-id">MSN-01</span>
                         </div>
                         <div class="mac-window-content">
                             <h3>Library Management System</h3>
-                            <p>A comprehensive full-stack solution for managing library resources, user tracking, and automated book reservations seamlessly.</p>
-                            <a href="#" class="project-link hover-target modal-trigger" data-title="Library Management System" data-desc="A comprehensive full-stack solution for managing library resources, user tracking, and automated book reservations seamlessly. Handled all backend Node.js routing and front-end React architecture." data-tech="React,Node.js,Express,MongoDB,REST API">Explore →</a>
+                            <p>A comprehensive full-stack solution for managing library resources, user tracking, and automated book reservations.</p>
+                            <a href="#" class="project-link modal-trigger" data-title="Library Management System" data-desc="A comprehensive full-stack solution for managing library resources, user tracking, and automated book reservations seamlessly. Handled all backend Node.js routing and front-end React architecture." data-tech="React,Node.js,Express,MongoDB,REST API">Open Log →</a>
                         </div>
                     </div>
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
+                    <div class="mac-window reveal">
                         <div class="mac-window-top">
                             <div class="mac-dot close"></div>
                             <div class="mac-dot minimize"></div>
                             <div class="mac-dot maximize"></div>
+                            <span class="win-id">MSN-02</span>
                         </div>
                         <div class="mac-window-content">
                             <h3>Interactive Physics Engine</h3>
-                            <p>A creative, high-performance HTML5 Canvas physics simulation engine featuring dynamic environments and robust collision mapping.</p>
-                            <a href="#" class="project-link hover-target modal-trigger" data-title="Interactive Physics Engine" data-desc="A creative, high-performance HTML5 Canvas physics simulation engine featuring dynamic environments and robust collision mapping. Achieves locked 60 FPS using RequestAnimationFrame and pure JavaScript physics mathematics." data-tech="HTML5 Canvas,JavaScript,Physics Math,Design">Explore →</a>
+                            <p>A creative, high-performance HTML5 Canvas physics simulation featuring dynamic environments and robust collision mapping.</p>
+                            <a href="#" class="project-link modal-trigger" data-title="Interactive Physics Engine" data-desc="A creative, high-performance HTML5 Canvas physics simulation engine featuring dynamic environments and robust collision mapping. Achieves a locked 60 FPS using requestAnimationFrame and pure JavaScript physics mathematics." data-tech="HTML5 Canvas,JavaScript,Physics Math,Design">Open Log →</a>
                         </div>
                     </div>
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
+                    <div class="mac-window reveal">
                         <div class="mac-window-top">
                             <div class="mac-dot close"></div>
                             <div class="mac-dot minimize"></div>
                             <div class="mac-dot maximize"></div>
+                            <span class="win-id">MSN-03</span>
                         </div>
                         <div class="mac-window-content">
                             <h3>Web App Security Testing</h3>
                             <p>Rigorous vulnerability assessments and security testing of complex web platforms utilizing OWASP ZAP.</p>
-                            <a href="#" class="project-link hover-target modal-trigger" data-title="Web App Security Testing" data-desc="Rigorous vulnerability assessments and security testing of complex web platforms utilizing OWASP ZAP. Discovered and patched XSS vulnerabilities and secured REST API endpoints." data-tech="OWASP ZAP,Burp Suite,Pen-Testing,Network Sec">Explore →</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="certifications" class="section">
-                <h2 class="section-title text-center reveal">Certifications</h2>
-                <div class="projects-grid">
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
-                        <div class="mac-window-top">
-                            <div class="mac-dot close"></div>
-                            <div class="mac-dot minimize"></div>
-                            <div class="mac-dot maximize"></div>
-                        </div>
-                        <div class="mac-window-content">
-                            <h3>Google Cybersecurity</h3>
-                            <p>Comprehensive training in cyber defense, network security, and threat mitigation strategies.</p>
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/MSLR2ST2AD4H" target="_blank" class="project-link hover-target">View Credential →</a>
-                        </div>
-                    </div>
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
-                        <div class="mac-window-top">
-                            <div class="mac-dot close"></div>
-                            <div class="mac-dot minimize"></div>
-                            <div class="mac-dot maximize"></div>
-                        </div>
-                        <div class="mac-window-content">
-                            <h3>Upcoming Certification</h3>
-                            <p>Details and credentials will be uploaded here shortly when the requirements are met.</p>
-                            <a href="#" class="project-link hover-target">View Credential →</a>
-                        </div>
-                    </div>
-                    <div class="mac-window reveal hover-target" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="5" data-tilt-speed="400">
-                        <div class="mac-window-top">
-                            <div class="mac-dot close"></div>
-                            <div class="mac-dot minimize"></div>
-                            <div class="mac-dot maximize"></div>
-                        </div>
-                        <div class="mac-window-content">
-                            <h3>Upcoming Certification</h3>
-                            <p>Details and credentials will be uploaded here shortly when the requirements are met.</p>
-                            <a href="#" class="project-link hover-target">View Credential →</a>
+                            <a href="#" class="project-link modal-trigger" data-title="Web App Security Testing" data-desc="Rigorous vulnerability assessments and security testing of complex web platforms utilizing OWASP ZAP. Discovered and patched XSS vulnerabilities and secured REST API endpoints." data-tech="OWASP ZAP,Burp Suite,Pen-Testing,Network Sec">Open Log →</a>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- CERTIFICATIONS -->
+            <section id="certifications" class="section">
+                <div class="section-head reveal">
+                    <span class="section-index">04</span>
+                    <h2 class="section-title">Flight Credentials</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="mac-window reveal">
+                        <div class="mac-window-top">
+                            <div class="mac-dot close"></div>
+                            <div class="mac-dot minimize"></div>
+                            <div class="mac-dot maximize"></div>
+                            <span class="win-id">CRT-01</span>
+                        </div>
+                        <div class="mac-window-content">
+                            <h3>Google Cybersecurity</h3>
+                            <p>Comprehensive training in cyber defense, network security, and threat-mitigation strategies.</p>
+                            <a href="https://www.coursera.org/account/accomplishments/specialization/MSLR2ST2AD4H" target="_blank" rel="noopener" class="project-link">View Credential →</a>
+                        </div>
+                    </div>
+                    <div class="mac-window reveal">
+                        <div class="mac-window-top">
+                            <div class="mac-dot close"></div>
+                            <div class="mac-dot minimize"></div>
+                            <div class="mac-dot maximize"></div>
+                            <span class="win-id">CRT-02</span>
+                        </div>
+                        <div class="mac-window-content">
+                            <h3>In Transit</h3>
+                            <p>Details and credentials will be logged here shortly, once mission requirements are met.</p>
+                            <a href="#" class="project-link">Pending →</a>
+                        </div>
+                    </div>
+                    <div class="mac-window reveal">
+                        <div class="mac-window-top">
+                            <div class="mac-dot close"></div>
+                            <div class="mac-dot minimize"></div>
+                            <div class="mac-dot maximize"></div>
+                            <span class="win-id">CRT-03</span>
+                        </div>
+                        <div class="mac-window-content">
+                            <h3>In Transit</h3>
+                            <p>Details and credentials will be logged here shortly, once mission requirements are met.</p>
+                            <a href="#" class="project-link">Pending →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
             <section id="contact" class="section">
+                <div class="section-head reveal">
+                    <span class="section-index">05</span>
+                    <h2 class="section-title">Establish Uplink</h2>
+                </div>
                 <div class="glass-card reveal">
-                    <h2 class="section-title text-center">Let's Connect</h2>
-                    <p class="text-center" style="margin-bottom: 2rem;">Interested in collaborating on a dynamic project or looking to add a creative developer to your team?</p>
+                    <p class="text-center text-pretty" style="margin-bottom: 2.5rem; max-width: 560px; margin-left:auto; margin-right:auto;">Interested in collaborating on a dynamic project, or looking to add a creative engineer to your crew? Transmit a signal.</p>
                     <form action="https://formspree.io/f/mqkenryp" method="POST" class="contact-form">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control hover-target" placeholder="Your Name" required>
+                            <input type="text" name="name" class="form-control" placeholder="Callsign / Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control hover-target" placeholder="Your Email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Return Frequency / Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="form-control hover-target" placeholder="Your Message" rows="5" required></textarea>
+                            <textarea name="message" class="form-control" placeholder="Transmission / Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="cta-button primary hover-target" style="width: 100%;">Send Message</button>
+                        <button type="submit" class="cta-button primary" style="width: 100%; justify-content:center;">Transmit Signal</button>
                     </form>
                 </div>
             </section>
         </main>
 
         <footer class="footer reveal">
-            <p>© 2026 Rizin Khader. All rights reserved.</p>
+            <span>© 2026 RIZIN KHADER · ALL SYSTEMS NOMINAL</span>
+            <span>LAT 00.000 · LON 00.000 · ORBIT STABLE</span>
         </footer>
     </div>
 
-    <div class="theme-widget">
-        <select id="themeSelector" class="theme-select hover-target">
-            <option value="morning">Morning</option>
-            <option value="afternoon">Afternoon</option>
-            <option value="evening" selected>Evening</option>
-            <option value="night">Night</option>
-        </select>
+    <!-- HUD telemetry -->
+    <div class="hud-widget" aria-hidden="true">
+        <div class="row"><span class="k">Observatory</span><span class="v gold">ONLINE</span></div>
+        <div class="row"><span class="k">Time</span><span class="v" id="hudClock">--:--:-- UTC</span></div>
+        <div class="row"><span class="k">Descent</span><span class="v" id="hudScroll">000%</span></div>
     </div>
 
-    <!-- Project Modal -->
+    <!-- Modal -->
     <div id="projectModal" class="modal-overlay">
-        <div class="modal-card mac-window" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-max="2" data-tilt-speed="400">
+        <div class="modal-card mac-window">
             <div class="mac-window-top">
-                <button class="mac-dot close hover-target" id="closeModalBtn" aria-label="Close"></button>
+                <button class="mac-dot close" id="closeModalBtn" aria-label="Close"></button>
                 <div class="mac-dot minimize"></div>
                 <div class="mac-dot maximize"></div>
+                <span class="win-id">MISSION DETAIL</span>
             </div>
             <div class="modal-content">
                 <h3 id="modalTitle">Project Title</h3>
@@ -263,16 +341,14 @@
                 <div class="modal-tech-stack" id="modalTechStack">
                     <span>Tech 1</span><span>Tech 2</span>
                 </div>
-                <div class="modal-actions" style="margin-top: 2rem;">
-                    <a href="#" class="cta-button primary hover-target">View Live Demo</a>
-                    <a href="#" class="cta-button hover-target">GitHub Repo</a>
+                <div class="modal-actions">
+                    <a href="#" class="cta-button primary">Live Demo</a>
+                    <a href="#" class="cta-button">GitHub Repo</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Vanilla Tilt Logic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js?v=2.0"></script>
 </body>
 </html>
